@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CotizacionArticulo.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,13 @@ using System.Windows.Forms;
 
 namespace CotizacionArticulo
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
-            InitializeComponent();
+            RegistroArticulo rg = new RegistroArticulo();
+            rg.Show();
+            //InitializeComponent();
         }
     }
 }
