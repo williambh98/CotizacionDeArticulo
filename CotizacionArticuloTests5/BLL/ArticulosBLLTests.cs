@@ -32,23 +32,43 @@ namespace CotizacionArticulo.BLL.Tests
         [TestMethod()]
         public void ModificarTest()
         {
-            
-                Assert.Fail();
-            }
+
+            Articulos articulo = new Articulos()
+            {
+                ArticuloID = 10,
+                Descripcion = "KLK WAWAWA",
+                Precio = 0,
+                Existencia = 1,
+                CantidadCotizada = 1,
+                FechaVencimiento = DateTime.Now
+            };
+            bool paso = ArticulosBLL.Modificar(articulo);
+            Assert.AreEqual(paso, true);
+        }
 
         [TestMethod()]
         public void EliminarTest()
         {
-            
-                Assert.Fail();
-            }
+
+            Articulos articulo = new Articulos()
+            {
+                ArticuloID = 10,
+                Descripcion = "KLK WAWAWA",
+                Precio = 0,
+                Existencia = 1,
+                CantidadCotizada = 1,
+                FechaVencimiento = DateTime.Now
+            };
+            bool paso = ArticulosBLL.Guardar(articulo);
+            Assert.AreEqual(paso, true);
+        }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            
-                Assert.Fail();
-         }
+            Assert.Fail();
+
+        }
 
         [TestMethod()]
         public void GetListTest()
