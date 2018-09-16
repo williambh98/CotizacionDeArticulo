@@ -127,7 +127,10 @@ namespace CotizacionArticulo.UI
             }
 
             if (paso)
+            {
                 MessageBox.Show("Se Guardo Exitosamente");
+                Limpiar();
+            }
             else
                 MessageBox.Show("No se Guardo Exitosamente");
         }
@@ -197,6 +200,7 @@ namespace CotizacionArticulo.UI
             if(ArticulosBLL.Eliminar(id))
             {
                 MessageBox.Show("Se elimino Exitosamente", "Exitoso!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpiar();
             }
         }
 
