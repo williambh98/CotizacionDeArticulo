@@ -32,20 +32,23 @@ namespace CotizacionArticulo.BLL.Tests
         [TestMethod()]
         public void ModificarTest()
         {
-            Assert.Fail();
-        }
+            
+                Assert.Fail();
+            }
 
         [TestMethod()]
         public void EliminarTest()
         {
-
-        }
+            
+                Assert.Fail();
+            }
 
         [TestMethod()]
         public void BuscarTest()
         {
             
-        }
+                Assert.Fail();
+         }
 
         [TestMethod()]
         public void GetListTest()

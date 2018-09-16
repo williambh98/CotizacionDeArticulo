@@ -15,7 +15,6 @@ namespace CotizacionArticulo.BLL
         public static bool Guardar(Articulos articulo)
         {
             bool paso = false;
-
             Contexto contexto = new Contexto();
             try
             {
