@@ -109,11 +109,13 @@
             // 
             // Burcarbutton
             // 
-            this.Burcarbutton.Location = new System.Drawing.Point(665, 47);
+            this.Burcarbutton.Image = global::CotizacionArticulo.Properties.Resources.Buscar;
+            this.Burcarbutton.Location = new System.Drawing.Point(672, 40);
             this.Burcarbutton.Name = "Burcarbutton";
-            this.Burcarbutton.Size = new System.Drawing.Size(85, 43);
+            this.Burcarbutton.Size = new System.Drawing.Size(97, 57);
             this.Burcarbutton.TabIndex = 8;
             this.Burcarbutton.Text = "Buscar";
+            this.Burcarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.Burcarbutton.UseVisualStyleBackColor = true;
             this.Burcarbutton.Click += new System.EventHandler(this.Burcarbutton_Click);
             // 

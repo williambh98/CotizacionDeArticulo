@@ -180,9 +180,9 @@
             // Eliminarbutton
             // 
             this.Eliminarbutton.Image = global::CotizacionArticulo.Properties.Resources.Eliminar;
-            this.Eliminarbutton.Location = new System.Drawing.Point(372, 390);
+            this.Eliminarbutton.Location = new System.Drawing.Point(367, 390);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(93, 49);
+            this.Eliminarbutton.Size = new System.Drawing.Size(98, 50);
             this.Eliminarbutton.TabIndex = 17;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
             this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
@@ -190,9 +190,9 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::CotizacionArticulo.Properties.Resources.icons8_guardar_48;
-            this.Guardarbutton.Location = new System.Drawing.Point(234, 390);
+            this.Guardarbutton.Location = new System.Drawing.Point(231, 390);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(104, 49);
+            this.Guardarbutton.Size = new System.Drawing.Size(109, 50);
             this.Guardarbutton.TabIndex = 16;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
@@ -200,9 +200,9 @@
             // Nuevobutton
             // 
             this.Nuevobutton.Image = global::CotizacionArticulo.Properties.Resources.icons8_nuevo_48;
-            this.Nuevobutton.Location = new System.Drawing.Point(85, 390);
+            this.Nuevobutton.Location = new System.Drawing.Point(89, 390);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(113, 50);
+            this.Nuevobutton.Size = new System.Drawing.Size(109, 50);
             this.Nuevobutton.TabIndex = 15;
             this.Nuevobutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.Nuevobutton.UseVisualStyleBackColor = true;
