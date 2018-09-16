@@ -26,7 +26,7 @@ namespace CotizacionArticulo.Entidades
             CantidadCotizada = 0;
             FechaVencimiento = DateTime.Now;
         }
-
+        /*
         public Articulos(int articuloid, string descripcion,decimal precio, int existencia, int cantidadcotizada, DateTime fechavencimiento )
         {
             ArticuloID = articuloid;
@@ -37,6 +37,6 @@ namespace CotizacionArticulo.Entidades
             FechaVencimiento = fechavencimiento;
 
         }
-        
+       */ 
     }
 }

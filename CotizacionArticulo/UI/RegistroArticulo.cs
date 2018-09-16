@@ -43,7 +43,7 @@ namespace CotizacionArticulo.UI
             Articulos articulos = new Articulos();
             articulos.ArticuloID = Convert.ToInt32(IDnumericUpDown.Value);
             articulos.Descripcion = DescripciontextBox.Text;
-            articulos.Precio = PrecionumericUpDown.Value;
+            articulos.Precio = Convert.ToDecimal(PrecionumericUpDown.Value);
             articulos.Existencia = Convert.ToInt32(ExistencianumericUpDown.Value);
             articulos.CantidadCotizada = Convert.ToInt32(CantidadnumericUpDown.Value);
             articulos.FechaVencimiento = FechadateTimePicker.Value;

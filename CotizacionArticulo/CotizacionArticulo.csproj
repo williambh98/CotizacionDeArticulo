@@ -110,7 +110,9 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DAL\Scripts\ArticuloDb.sql" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\descarga %281%29.png" />
     <None Include="Resources\images.png" />
@@ -119,9 +121,6 @@
     <None Include="Resources\icons8-nuevo-48.png" />
     <None Include="Resources\New.png" />
     <None Include="Resources\Buscar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DAL\Scripts\ArticuloDb.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
