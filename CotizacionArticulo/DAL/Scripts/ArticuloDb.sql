@@ -6,8 +6,8 @@ GO
 CREATE TABLE Articulos
 (
 ArticuloID int primary Key identity,
-Descripcion varchar(30) NOT NULL,
-Precio float,
+Descripcion varchar (max) NOT NULL,
+Precio money,
 Existencia int,
 CantidadCotizada int,
 FechaVencimiento datetime

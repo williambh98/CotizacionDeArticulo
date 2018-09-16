@@ -19,7 +19,7 @@ namespace CotizacionArticulo.BLL.Tests
             {
                 ArticuloID = 10,
                 Descripcion = "KLK WAWAWA",
-                Precio = 123f,
+                Precio = 0,
                 Existencia = 1,
                 CantidadCotizada = 1,
                 FechaVencimiento = DateTime.Now

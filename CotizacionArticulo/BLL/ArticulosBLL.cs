@@ -56,17 +56,31 @@ namespace CotizacionArticulo.BLL
             bool paso = false;
             Contexto contexto = new Contexto();
 
+            /*
             try
             {
-                Articulos articulos = new Articulos();
-                contexto.articulosbl.Remove(articulos);
-                if(contexto.SaveChanges()>0)
-                {
-                    paso = true;
-                }
+                var eliminar = contexto.articulosbl.Find(id);
+                contexto.Entry(eliminar).State = System.Data.Entity.EntityState.Deleted;
+                paso = (contexto.SaveChanges() > 0);
                 contexto.Dispose();
 
-            }catch(Exception)
+            }
+            */
+            try
+            {
+                Articulos articulo = contexto.articulosbl.Find(id);
+                if (articulo != null)
+                {
+                    contexto.Entry(articulo).State = EntityState.Deleted;
+                }
+                if (contexto.SaveChanges() > 0)
+                {
+                    contexto.Dispose();
+                    paso = true;
+                }
+
+            }
+            catch (Exception)
             {
                 throw;
             }
@@ -80,7 +94,7 @@ namespace CotizacionArticulo.BLL
 
             try
             {
-                articulos = contexto.articulosbl.Find(id);
+                articulos = contexto.articulosbl.Find(id);//Busca
                 contexto.Dispose();
             }catch(Exception)
             {

@@ -23,8 +23,8 @@ namespace CotizacionArticulo.UI
         {
             IDnumericUpDown.Value = 0;
             DescripciontextBox.Text = string.Empty;
-            PreciotextBox.Text = Convert.ToString(0.0f);
-            ExistenciatextBox.Text = Convert.ToString(0);
+            PrecionumericUpDown.Value = 0;
+            ExistencianumericUpDown.Value = 0;
             CantidadnumericUpDown.Value = 0;
             FechadateTimePicker.Value = DateTime.Now;
             errorProvider.Clear();
@@ -43,24 +43,25 @@ namespace CotizacionArticulo.UI
             Articulos articulos = new Articulos();
             articulos.ArticuloID = Convert.ToInt32(IDnumericUpDown.Value);
             articulos.Descripcion = DescripciontextBox.Text;
-            articulos.Precio = Convert.ToSingle(PreciotextBox.Text);
-            articulos.Existencia = Convert.ToInt32(ExistenciatextBox.Text);
+            articulos.Precio = Convert.ToDecimal(PrecionumericUpDown.Value);
+            articulos.Existencia = Convert.ToInt32(ExistencianumericUpDown.Value);
             articulos.CantidadCotizada = Convert.ToInt32(CantidadnumericUpDown.Value);
             articulos.FechaVencimiento = FechadateTimePicker.Value;
             return articulos;
 
         }
-
+        /*
         private void LlenarCampo(Articulos articulos)
         {
             
             CantidadnumericUpDown.Value = articulos.CantidadCotizada;
             DescripciontextBox.Text = articulos.Descripcion;
-            PreciotextBox.Text = Convert.ToString(articulos.Precio);
+            PrecionumericUpDown.Value = articulos.Precio;
             FechadateTimePicker.Value = articulos.FechaVencimiento;
-            ExistenciatextBox.Text = Convert.ToString(articulos.Existencia);
+            ExistencianumericUpDown.Value =articulos.Existencia;
             IDnumericUpDown.Value = articulos.ArticuloID;
         }
+        */
 
         private bool GuardarValidar()
         {
@@ -71,26 +72,26 @@ namespace CotizacionArticulo.UI
                 errorProvider.SetError(DescripciontextBox, "Ingrese Descripcion");
                 paso = false;
             }
-            if(CantidadnumericUpDown.Value <=0)
+            if (CantidadnumericUpDown.Value <= 0)
             {
                 errorProvider.SetError(CantidadnumericUpDown, "Ingrese Cantidad");
                 paso = false;
-             }
-            if (string.IsNullOrWhiteSpace(ExistenciatextBox.Text))
-               {
-                errorProvider.SetError(ExistenciatextBox, "Ingrese Existencia");
-                paso = false;
-               }
-            if (string.IsNullOrWhiteSpace(PreciotextBox.Text))
+            }
+            if (ExistencianumericUpDown.Value <= 0)
             {
-                errorProvider.SetError(PreciotextBox, "Ingrese Precio");
+                errorProvider.SetError(ExistencianumericUpDown, "Ingrese Existencia");
                 paso = false;
             }
-           /* if(FechadateTimePicker.Value <= DateTime.Now)
+            if (PrecionumericUpDown.Value <= 0)
             {
-                errorProvider.SetError(FechadateTimePicker, "Ingrese Fecha");
+                errorProvider.SetError(PrecionumericUpDown, "Ingrese Precio");
                 paso = false;
-            }*/
+            }
+            /* if(FechadateTimePicker.Value <= DateTime.Now)
+             {
+                 errorProvider.SetError(FechadateTimePicker, "Ingrese Fecha");
+                 paso = false;
+             }*/
 
             return paso;
 
@@ -108,16 +109,16 @@ namespace CotizacionArticulo.UI
 
             bool paso = false;
 
-            if(!GuardarValidar())
+            if (!GuardarValidar())
                 return;
-                
-            
+
+
             articulos = LlenarClase();
             if (IDnumericUpDown.Value == 0)
                 paso = ArticulosBLL.Guardar(articulos);
             else
             {
-                if(!ExisteEnLaBAseDeDatos())
+                if (!ExisteEnLaBAseDeDatos())
                 {
                     MessageBox.Show("No se puede modificar algo que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -130,9 +131,59 @@ namespace CotizacionArticulo.UI
             else
                 MessageBox.Show("No se Guardo Exitosamente");
         }
+    
 
+        
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+            errorProvider.Clear();
+            int id = Convert.ToInt32(IDnumericUpDown.Value);
+            Articulos articulo = BLL.ArticulosBLL.Buscar(id);
+
+            if (GuardarValidar())
+            {
+                MessageBox.Show("Llene Casilla");
+            }
+            else
+            {
+                if (articulo != null)
+                {
+                   IDnumericUpDown.Value = articulo.ArticuloID;
+                    FechadateTimePicker.Value = articulo.FechaVencimiento;
+                    DescripciontextBox.Text = articulo.Descripcion;
+                    PrecionumericUpDown.Value = articulo.Precio;
+                    ExistencianumericUpDown.Value = articulo.Existencia;
+                    CantidadnumericUpDown.Value = articulo.CantidadCotizada;
+                    errorProvider.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("No se Encontro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    errorProvider.Clear();
+                }
+            }
+        
+        /*
+        int id;
+        Articulos articulos = new Articulos();
+        int.TryParse(IDnumericUpDown.Text, out id);
+        articulos = ArticulosBLL.Buscar(id);
+
+        if (articulos != null)
+        {
+            LlenarCampo(articulos);
+            MessageBox.Show("Articulo Encontrado");
+        }
+        else
+        {
+            MessageBox.Show("No se encontro");
+        }
+        */
+    }
+        
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
+            errorProvider.Clear();
             int id;
             int.TryParse(IDnumericUpDown.Text, out id);
 
@@ -147,21 +198,6 @@ namespace CotizacionArticulo.UI
             }
         }
 
-        private void Buscarbutton_Click(object sender, EventArgs e)
-        {
-            int id;
-            Articulos articulos = new Articulos();
-            int.TryParse(IDnumericUpDown.Text, out id);
-            articulos = ArticulosBLL.Buscar(id);
-            if(articulos!=null)
-            {
-                LlenarCampo(articulos);
-                MessageBox.Show("Articulo Encontrado");
-            }
-            else
-            {
-                MessageBox.Show("No se encontro");
-            }
-        }
+       
     }
 }

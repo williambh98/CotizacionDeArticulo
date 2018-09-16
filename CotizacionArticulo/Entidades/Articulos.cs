@@ -12,7 +12,7 @@ namespace CotizacionArticulo.Entidades
         [Key]
         public int ArticuloID { get; set; }
         public string Descripcion { get; set; }
-        public float Precio { get; set; }
+        public decimal Precio { get; set; }
         public int Existencia { get; set; }
         public int CantidadCotizada { get; set; }
         public DateTime FechaVencimiento { get; set; }
@@ -27,10 +27,10 @@ namespace CotizacionArticulo.Entidades
             FechaVencimiento = DateTime.Now;
         }
 
-        public Articulos(int articuloid, string descripcion,int precio, int existencia, int cantidadcotizada, DateTime fechavencimiento )
+        public Articulos(int articuloid, string descripcion,decimal precio, int existencia, int cantidadcotizada, DateTime fechavencimiento )
         {
             ArticuloID = articuloid;
-            Descripcion = descripcion;
+            this.Descripcion = descripcion;
             Precio = precio;
             Existencia = existencia;
             CantidadCotizada = cantidadcotizada;
