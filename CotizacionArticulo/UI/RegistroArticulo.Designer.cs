@@ -41,12 +41,13 @@
             this.IDnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.CantidadnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
-            this.Buscarbutton = new System.Windows.Forms.Button();
-            this.Nuevobutton = new System.Windows.Forms.Button();
-            this.Guardarbutton = new System.Windows.Forms.Button();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
             this.PrecionumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.ExistencianumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.Guardarbutton = new System.Windows.Forms.Button();
+            this.Nuevobutton = new System.Windows.Forms.Button();
+            this.Buscarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
@@ -57,7 +58,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 73);
+            this.label1.Location = new System.Drawing.Point(62, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 0;
@@ -65,7 +66,7 @@
             // ArticuloIDlabel
             // 
             this.ArticuloIDlabel.AutoSize = true;
-            this.ArticuloIDlabel.Location = new System.Drawing.Point(71, 99);
+            this.ArticuloIDlabel.Location = new System.Drawing.Point(62, 101);
             this.ArticuloIDlabel.Name = "ArticuloIDlabel";
             this.ArticuloIDlabel.Size = new System.Drawing.Size(68, 17);
             this.ArticuloIDlabel.TabIndex = 1;
@@ -74,7 +75,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 153);
+            this.label2.Location = new System.Drawing.Point(62, 153);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 17);
             this.label2.TabIndex = 2;
@@ -83,7 +84,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(74, 208);
+            this.label3.Location = new System.Drawing.Point(62, 203);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 17);
             this.label3.TabIndex = 3;
@@ -92,7 +93,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(74, 256);
+            this.label4.Location = new System.Drawing.Point(62, 252);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 17);
             this.label4.TabIndex = 4;
@@ -101,7 +102,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(71, 300);
+            this.label5.Location = new System.Drawing.Point(62, 296);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(121, 17);
             this.label5.TabIndex = 5;
@@ -111,11 +112,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(62, 356);
+            this.label6.Location = new System.Drawing.Point(62, 344);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 17);
             this.label6.TabIndex = 6;
             this.label6.Text = "Fecha vencimiento";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // errorProvider
             // 
@@ -124,91 +126,106 @@
             // FechadateTimePicker
             // 
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(198, 351);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(198, 339);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(256, 22);
             this.FechadateTimePicker.TabIndex = 8;
             // 
             // IDnumericUpDown
             // 
-            this.IDnumericUpDown.Location = new System.Drawing.Point(198, 97);
+            this.IDnumericUpDown.Location = new System.Drawing.Point(198, 96);
             this.IDnumericUpDown.Name = "IDnumericUpDown";
             this.IDnumericUpDown.Size = new System.Drawing.Size(128, 22);
             this.IDnumericUpDown.TabIndex = 9;
             // 
             // CantidadnumericUpDown
             // 
-            this.CantidadnumericUpDown.Location = new System.Drawing.Point(198, 298);
+            this.CantidadnumericUpDown.Location = new System.Drawing.Point(198, 291);
             this.CantidadnumericUpDown.Name = "CantidadnumericUpDown";
             this.CantidadnumericUpDown.Size = new System.Drawing.Size(256, 22);
             this.CantidadnumericUpDown.TabIndex = 10;
             // 
             // DescripciontextBox
             // 
-            this.DescripciontextBox.Location = new System.Drawing.Point(198, 153);
+            this.DescripciontextBox.Location = new System.Drawing.Point(198, 148);
             this.DescripciontextBox.Name = "DescripciontextBox";
             this.DescripciontextBox.Size = new System.Drawing.Size(256, 22);
             this.DescripciontextBox.TabIndex = 11;
             // 
-            // Buscarbutton
-            // 
-            this.Buscarbutton.Location = new System.Drawing.Point(372, 83);
-            this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(75, 48);
-            this.Buscarbutton.TabIndex = 14;
-            this.Buscarbutton.Text = "Buscar";
-            this.Buscarbutton.UseVisualStyleBackColor = true;
-            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
-            // 
-            // Nuevobutton
-            // 
-            this.Nuevobutton.Location = new System.Drawing.Point(100, 404);
-            this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(92, 52);
-            this.Nuevobutton.TabIndex = 15;
-            this.Nuevobutton.Text = "Nuevo";
-            this.Nuevobutton.UseVisualStyleBackColor = true;
-            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
-            // 
-            // Guardarbutton
-            // 
-            this.Guardarbutton.Location = new System.Drawing.Point(233, 407);
-            this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(104, 49);
-            this.Guardarbutton.TabIndex = 16;
-            this.Guardarbutton.Text = "Guardar";
-            this.Guardarbutton.UseVisualStyleBackColor = true;
-            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
-            // 
-            // Eliminarbutton
-            // 
-            this.Eliminarbutton.Location = new System.Drawing.Point(372, 404);
-            this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(93, 49);
-            this.Eliminarbutton.TabIndex = 17;
-            this.Eliminarbutton.Text = "Eliminar";
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
-            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
-            // 
             // PrecionumericUpDown
             // 
-            this.PrecionumericUpDown.Location = new System.Drawing.Point(198, 203);
+            this.PrecionumericUpDown.Location = new System.Drawing.Point(198, 198);
             this.PrecionumericUpDown.Name = "PrecionumericUpDown";
             this.PrecionumericUpDown.Size = new System.Drawing.Size(256, 22);
             this.PrecionumericUpDown.TabIndex = 18;
             // 
             // ExistencianumericUpDown
             // 
-            this.ExistencianumericUpDown.Location = new System.Drawing.Point(198, 254);
+            this.ExistencianumericUpDown.Location = new System.Drawing.Point(198, 247);
             this.ExistencianumericUpDown.Name = "ExistencianumericUpDown";
             this.ExistencianumericUpDown.Size = new System.Drawing.Size(256, 22);
             this.ExistencianumericUpDown.TabIndex = 19;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Silver;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(131, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(275, 32);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Registro cotización";
+            // 
+            // Eliminarbutton
+            // 
+            this.Eliminarbutton.Image = global::CotizacionArticulo.Properties.Resources.Eliminar;
+            this.Eliminarbutton.Location = new System.Drawing.Point(372, 390);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(93, 49);
+            this.Eliminarbutton.TabIndex = 17;
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            // 
+            // Guardarbutton
+            // 
+            this.Guardarbutton.Image = global::CotizacionArticulo.Properties.Resources.icons8_guardar_48;
+            this.Guardarbutton.Location = new System.Drawing.Point(234, 390);
+            this.Guardarbutton.Name = "Guardarbutton";
+            this.Guardarbutton.Size = new System.Drawing.Size(104, 49);
+            this.Guardarbutton.TabIndex = 16;
+            this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
+            // 
+            // Nuevobutton
+            // 
+            this.Nuevobutton.Image = global::CotizacionArticulo.Properties.Resources.icons8_nuevo_48;
+            this.Nuevobutton.Location = new System.Drawing.Point(85, 390);
+            this.Nuevobutton.Name = "Nuevobutton";
+            this.Nuevobutton.Size = new System.Drawing.Size(113, 50);
+            this.Nuevobutton.TabIndex = 15;
+            this.Nuevobutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
+            // 
+            // Buscarbutton
+            // 
+            this.Buscarbutton.Image = global::CotizacionArticulo.Properties.Resources.Buscar;
+            this.Buscarbutton.Location = new System.Drawing.Point(350, 80);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(104, 55);
+            this.Buscarbutton.TabIndex = 14;
+            this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // RegistroArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 483);
+            this.ClientSize = new System.Drawing.Size(532, 503);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.ExistencianumericUpDown);
             this.Controls.Add(this.PrecionumericUpDown);
             this.Controls.Add(this.Eliminarbutton);
@@ -228,6 +245,7 @@
             this.Controls.Add(this.label1);
             this.Name = "RegistroArticulo";
             this.Text = "Registro";
+            this.Load += new System.EventHandler(this.RegistroArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).EndInit();
@@ -258,5 +276,6 @@
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.NumericUpDown ExistencianumericUpDown;
         private System.Windows.Forms.NumericUpDown PrecionumericUpDown;
+        private System.Windows.Forms.Label label7;
     }
 }

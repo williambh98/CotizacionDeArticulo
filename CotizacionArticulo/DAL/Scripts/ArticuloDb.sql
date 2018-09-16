@@ -13,3 +13,5 @@ CantidadCotizada int,
 FechaVencimiento datetime
 
 );
+
+--select * from Articulos

@@ -15,9 +15,25 @@ namespace CotizacionArticulo
     {
         public MainForm()
         {
+            InitializeComponent();
+        }
+
+       
+        private void registroCotizacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             RegistroArticulo rg = new RegistroArticulo();
             rg.Show();
-            //InitializeComponent();
+        }
+
+        private void consultasArticulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultasArticulo cs = new ConsultasArticulo();
+            cs.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

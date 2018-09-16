@@ -75,6 +75,9 @@
     <Compile Include="UI\RegistroArticulo.Designer.cs">
       <DependentUpon>RegistroArticulo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -83,7 +86,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\ConsultasArticulo.resx">
+      <DependentUpon>ConsultasArticulo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\RegistroArticulo.resx">
       <DependentUpon>RegistroArticulo.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,11 +110,14 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="DAL\Scripts\ArticuloDb.sql" />
+    <None Include="Resources\Eliminar.png" />
+    <None Include="Resources\icons8-guardar-48.png" />
+    <None Include="Resources\icons8-nuevo-48.png" />
+    <None Include="Resources\New.png" />
+    <None Include="Resources\Buscar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
