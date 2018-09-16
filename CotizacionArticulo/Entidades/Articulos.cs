@@ -37,5 +37,6 @@ namespace CotizacionArticulo.Entidades
             FechaVencimiento = fechavencimiento;
 
         }
+        
     }
 }

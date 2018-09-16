@@ -112,12 +112,16 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="DAL\Scripts\ArticuloDb.sql" />
+    <None Include="Resources\descarga %281%29.png" />
+    <None Include="Resources\images.png" />
     <None Include="Resources\Eliminar.png" />
     <None Include="Resources\icons8-guardar-48.png" />
     <None Include="Resources\icons8-nuevo-48.png" />
     <None Include="Resources\New.png" />
     <None Include="Resources\Buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\Scripts\ArticuloDb.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

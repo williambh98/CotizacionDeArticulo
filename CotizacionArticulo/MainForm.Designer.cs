@@ -33,7 +33,6 @@
             this.registroCotizacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasArticulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +44,7 @@
             this.consultasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(536, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -60,7 +59,7 @@
             // registroCotizacionToolStripMenuItem
             // 
             this.registroCotizacionToolStripMenuItem.Name = "registroCotizacionToolStripMenuItem";
-            this.registroCotizacionToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.registroCotizacionToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.registroCotizacionToolStripMenuItem.Text = "RegistroArticulo";
             this.registroCotizacionToolStripMenuItem.Click += new System.EventHandler(this.registroCotizacionToolStripMenuItem_Click);
             // 
@@ -75,25 +74,17 @@
             // consultasArticulosToolStripMenuItem
             // 
             this.consultasArticulosToolStripMenuItem.Name = "consultasArticulosToolStripMenuItem";
-            this.consultasArticulosToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.consultasArticulosToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.consultasArticulosToolStripMenuItem.Text = "ConsultasArticulos";
             this.consultasArticulosToolStripMenuItem.Click += new System.EventHandler(this.consultasArticulosToolStripMenuItem_Click);
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.toolStrip1);
+            this.BackgroundImage = global::CotizacionArticulo.Properties.Resources.descarga__1_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(536, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
@@ -113,7 +104,6 @@
         private System.Windows.Forms.ToolStripMenuItem registroCotizacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasArticulosToolStripMenuItem;
-        private System.Windows.Forms.ToolStrip toolStrip1;
     }
 }
 

@@ -7,11 +7,9 @@ CREATE TABLE Articulos
 (
 ArticuloID int primary Key identity,
 Descripcion varchar (max) NOT NULL,
-Precio money,
+Precio decimal,
 Existencia int,
 CantidadCotizada int,
 FechaVencimiento datetime
 
 );
-
---select * from Articulos

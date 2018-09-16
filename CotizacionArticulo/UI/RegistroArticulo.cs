@@ -43,14 +43,14 @@ namespace CotizacionArticulo.UI
             Articulos articulos = new Articulos();
             articulos.ArticuloID = Convert.ToInt32(IDnumericUpDown.Value);
             articulos.Descripcion = DescripciontextBox.Text;
-            articulos.Precio = Convert.ToDecimal(PrecionumericUpDown.Value);
+            articulos.Precio = PrecionumericUpDown.Value;
             articulos.Existencia = Convert.ToInt32(ExistencianumericUpDown.Value);
             articulos.CantidadCotizada = Convert.ToInt32(CantidadnumericUpDown.Value);
             articulos.FechaVencimiento = FechadateTimePicker.Value;
             return articulos;
 
         }
-        /*
+       
         private void LlenarCampo(Articulos articulos)
         {
             
@@ -61,7 +61,7 @@ namespace CotizacionArticulo.UI
             ExistencianumericUpDown.Value =articulos.Existencia;
             IDnumericUpDown.Value = articulos.ArticuloID;
         }
-        */
+      
 
         private bool GuardarValidar()
         {
@@ -131,13 +131,13 @@ namespace CotizacionArticulo.UI
             else
                 MessageBox.Show("No se Guardo Exitosamente");
         }
-    
 
-        
+
+
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             errorProvider.Clear();
-            int id = Convert.ToInt32(IDnumericUpDown.Value);
+            /*int id = Convert.ToInt32(IDnumericUpDown.Value);
             Articulos articulo = BLL.ArticulosBLL.Buscar(id);
 
             if (GuardarValidar())
@@ -162,24 +162,26 @@ namespace CotizacionArticulo.UI
                     errorProvider.Clear();
                 }
             }
-        
-        /*
-        int id;
-        Articulos articulos = new Articulos();
-        int.TryParse(IDnumericUpDown.Text, out id);
-        articulos = ArticulosBLL.Buscar(id);
+            */
 
-        if (articulos != null)
-        {
-            LlenarCampo(articulos);
-            MessageBox.Show("Articulo Encontrado");
+
+            int id;
+            Articulos articulos = new Articulos();
+            int.TryParse(IDnumericUpDown.Text, out id);
+            articulos = ArticulosBLL.Buscar(id);
+
+            if (articulos != null)
+            {
+                LlenarCampo(articulos);
+                MessageBox.Show("Articulo Encontrado");
+            }
+            else
+            {
+                MessageBox.Show("No se encontro");
+            }
+
         }
-        else
-        {
-            MessageBox.Show("No se encontro");
-        }
-        */
-    }
+    
         
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
